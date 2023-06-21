@@ -51,7 +51,7 @@ public class C11_Get_ExpectedDataOlusturma {
 
         // 4 - Assertion (EXPECTED DATA VS. ACTUAL DATA)
 // Dönen response Json formatta olsa da dönen response değerleri direk kullanılamaz.Bunun için dönen response
-        JsonPath respJP = response.jsonPath();//body'sini kullanılabilecek metitlarla dönüştürmemiz gerekiyor.
+        JsonPath respJP = response.jsonPath();//body'sini kullanılabilecek metotlarla dönüştürmemiz gerekiyor.
 // Yani direk JSon Object olarak değerlendiremiyoruz.
         assertEquals(expData.get("userId"), respJP.get("userId"));
         assertEquals(expData.get("id"), respJP.get("id"));
