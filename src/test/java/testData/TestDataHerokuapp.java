@@ -4,6 +4,8 @@ import org.json.JSONObject;
 
 public class TestDataHerokuapp {
 
+    public int basariliStatusCode = 200;
+
     /*
         {
           "firstname" : "Ali",
@@ -24,7 +26,7 @@ public class TestDataHerokuapp {
 
         bookingdates.put("checkin","2021-06-01");
         bookingdates.put("checkout","2021-06-10");
-
+//bookingdates sadece bu scope'ta geçerli.
 
         return  bookingdates;
     }
@@ -38,12 +40,37 @@ public class TestDataHerokuapp {
         booking.put("totalprice",500);
         booking.put("depositpaid",false);
         booking.put("additionalneeds","wi-fi");
-        booking.put("bookingdates",bookingOlusturJSON());
-
+        booking.put("bookingdates",bookingdatesOlusturJSON());
+//bookingdates için yukarıda oluşturduğumuz method'u buradan call ediyoruz, bookingdates'i değil.
         return  booking;
     }
+    /*
+    {
+    "bookingid":24,
+    "booking":{
+            "firstname":"Ali",
+            "lastname":"Bak",
+            "totalprice":500,
+            "depositpaid":false,
+            "bookingdates":{
+                            "checkin":"2021-06-01",
+                            "checkout":"2021-06-10"
+                            },
+            "additionalneeds":"wi-fi"
+               }
+    }
+     */
 
+    public JSONObject expectedBodyOlusturJSON() {
 
+        JSONObject expData = new JSONObject();
+
+        expData.put("bookingid", 24);
+        expData.put("booking", bookingOlusturJSON());
+
+        return expData;
+
+    }
 
 
 
