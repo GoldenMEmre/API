@@ -7,9 +7,11 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class BookingPOJO {
+public class HerokuappExpBodyPOJO {
     /*
     {
+                    "bookingid":24,
+                    "booking":{
                         "firstname":"Ali",
                         "lastname":"Bak",
                         "totalprice":500,
@@ -21,13 +23,9 @@ public class BookingPOJO {
                         ,
                         "additionalneeds":"wi-fi"
                               }
+                    }
      */
 
-    private String firstname;
-    private String lastname;
-    private int totalprice;
-    private boolean depositpaid;
-    private BookingdatesPOJO bookingdates;
-    private String additionalneeds;
-
+    private int bookingid;
+    private BookingPOJO booking;
 }

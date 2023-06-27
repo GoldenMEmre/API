@@ -19,7 +19,6 @@ public class DummyDataPOJO {
             "profile_image":""
             }
      */
-
     private int id;
 
     private String employee_name;

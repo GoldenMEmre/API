@@ -2,14 +2,23 @@ package pojos;
 
 public class JsonPlaceRequestBodyPOJO {
 
+    /*
+    {
+    "title":"Ahmet",
+    "body":"Merhaba",
+    "userId":10,
+    "id":70
+    }
+     */
 
+    // 1 - Obje içerisindeki tüm key degerlerini class levelda private variable olarak hazirla
     private String title;
-
     private String body;
-
     private int userId;
-
     private int id;
+
+    // 2 - Getter - Setter lari hazirla
+
 
     public String getTitle() {
         return title;
@@ -41,12 +50,9 @@ public class JsonPlaceRequestBodyPOJO {
 
     public void setId(int id) {
         this.id = id;
-
-
-
-
-
     }
+
+    // 3 - Tum parametreleri iceren Constructor olustur
 
     public JsonPlaceRequestBodyPOJO(String title, String body, int userId, int id) {
         this.title = title;
@@ -55,15 +61,17 @@ public class JsonPlaceRequestBodyPOJO {
         this.id = id;
     }
 
+    // 4 - Parametresiz Constructor olustur
+
     public JsonPlaceRequestBodyPOJO(){
-
-
     }
+
+    // 5 - toString() methodu olustur
 
     @Override
     public String toString() {
         return "JsonPlaceRequestBodyPOJO{" +
-                "title='" + title + '\'' +
+                "title='" + title + '\'' +  // {title='Ahmet',bbody='Merhaba',userId=70, id=3}
                 ", body='" + body + '\'' +
                 ", userId=" + userId +
                 ", id=" + id +

@@ -12,7 +12,7 @@ public class DummyBaseURL {
     public void setUp() {
 
         specDummy = new RequestSpecBuilder()
-                .setBaseUri("http://dummy.restapiexample.com")
-                .build();
+                                    .setBaseUri("http://dummy.restapiexample.com")
+                                    .build();
     }
 }

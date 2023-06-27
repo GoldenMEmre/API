@@ -90,7 +90,7 @@ public class C21_Post_TestDataKullanimi extends HerokuAppBaseURL{
         assertEquals(expData.getJSONObject("booking").getJSONObject("bookingdates").get("checkout"),
                                     resJP.get("booking.bookingdates.checkout"));
 
-    }//response.jsonPath olmadanokuyamıyoruz. Response üzerinden üzerinden yaptığımız sorguları jsonPath olmadan nasıl
+    }//response.jsonPath olmadan okuyamıyoruz. Response üzerinden üzerinden yaptığımız sorguları jsonPath olmadan nasıl
 //yapıyoruz? Assertions'ların içinde response'imizin body'sine girmek istiyorsak, response'in body'si salt bir şekilde
 }// gelmiyor.O yüzden JsonPath'e dönüştürmek zorundayız.
 // response.then().assertThat().body() ---> burada response'in kendi method'unu kullandigimiz icin bunu extra JsonPath'e
